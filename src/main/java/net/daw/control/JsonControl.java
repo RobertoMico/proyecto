@@ -33,14 +33,18 @@ import net.daw.control.operation.generic.specific.implementation.CuestionarioCon
 import net.daw.control.operation.specific.implementation.DetallePedidoControlOperationSpImpl;
 import net.daw.control.operation.generic.specific.implementation.DocumentoControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.DocumentobonitoControlOperationGenSpImpl;
+import net.daw.control.operation.generic.specific.implementation.EstadisticaControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.OpcionControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.PedidoControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.PreguntaControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.PublicacionControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.EstadoControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.EstadotareaControlOperationGenSpImpl;
+import net.daw.control.operation.generic.specific.implementation.JugadorControlOperationGenSpImpl;
+import net.daw.control.operation.generic.specific.implementation.PartidoControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.ProyectoControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.RespuestaControlOperationGenSpImpl;
+import net.daw.control.operation.generic.specific.implementation.ContrincanteControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.TrabajoControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.TipodocumentoControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.TipotareaControlOperationGenSpImpl;
@@ -65,14 +69,18 @@ import net.daw.control.route.generic.specific.implementation.AmistadControlRoute
 import net.daw.control.route.generic.specific.implementation.CuestionarioControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.DocumentoControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.DocumentobonitoControlRouteGenSpImpl;
+import net.daw.control.route.generic.specific.implementation.EstadisticaControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.PreguntaControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.OpcionControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.PublicacionControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.EstadoControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.EstadotareaControlRouteGenSpImpl;
+import net.daw.control.route.generic.specific.implementation.JugadorControlRouteGenSpImpl;
+import net.daw.control.route.generic.specific.implementation.PartidoControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.PedidoControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.ProyectoControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.RespuestaControlRouteGenSpImpl;
+import net.daw.control.route.generic.specific.implementation.ContrincanteControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.TrabajoControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.TipodocumentoControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.TipotareaControlRouteGenSpImpl;
@@ -315,6 +323,28 @@ public class JsonControl extends HttpServlet {
                         break;
                         
 
+                        
+                    case "jugador":
+                        JugadorControlRouteGenSpImpl oJugadorRoute = new JugadorControlRouteGenSpImpl();
+                        JugadorControlOperationGenSpImpl oJugadorControlOperation = new JugadorControlOperationGenSpImpl(request);
+                        jsonResult = oJugadorRoute.execute(request, oJugadorControlOperation);
+                        break;
+                    case "estadistica":
+                        EstadisticaControlRouteGenSpImpl oEstadisticaRoute = new EstadisticaControlRouteGenSpImpl();
+                        EstadisticaControlOperationGenSpImpl oEstadisticaControlOperation = new EstadisticaControlOperationGenSpImpl(request);
+                        jsonResult = oEstadisticaRoute.execute(request, oEstadisticaControlOperation);
+                        break;    
+                    case "partido":
+                        PartidoControlRouteGenSpImpl oPartidoRoute = new PartidoControlRouteGenSpImpl();
+                        PartidoControlOperationGenSpImpl oPartidoControlOperation = new PartidoControlOperationGenSpImpl(request);
+                        jsonResult = oPartidoRoute.execute(request, oPartidoControlOperation);
+                        break;     
+                    case "contrincante":
+                        ContrincanteControlRouteGenSpImpl oContrincanteRoute = new ContrincanteControlRouteGenSpImpl();
+                        ContrincanteControlOperationGenSpImpl oContrincanteControlOperation = new ContrincanteControlOperationGenSpImpl(request);
+                        jsonResult = oContrincanteRoute.execute(request, oContrincanteControlOperation);
+                        break;     
+                        
                     default:
                         ExceptionBooster.boost(new Exception(this.getClass().getName() + ":processRequest ERROR: no such operation"));
                 }
