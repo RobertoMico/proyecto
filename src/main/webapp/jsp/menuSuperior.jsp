@@ -41,6 +41,8 @@
             <li><a href="jsp#/impuesto">Impuesto</a></li>
             <li><a href="jsp#/pedido">Pedido</a></li>
             <li><a href="jsp#/jugador">Jugador</a></li>
+            <li><a href="jsp#/contrincante">Contrincante</a></li>
+            <li><a href="jsp#/partido">Partido</a></li>
             <li><a href="#">Vacío</a></li>
             <li class="divider"></li>
             <li class="dropdown-header">División</li>

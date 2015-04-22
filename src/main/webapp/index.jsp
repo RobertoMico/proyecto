@@ -363,6 +363,16 @@
         <script src="js/specific/jugador/model.js" charset="UTF-8"></script>
         <script src="js/specific/jugador/view.js" charset="UTF-8"></script>
         <script src="js/specific/jugador/routes.js" charset="UTF-8"></script>
+        
+        <script src="js/specific/contrincante/control.js" charset="UTF-8"></script>
+        <script src="js/specific/contrincante/model.js" charset="UTF-8"></script>
+        <script src="js/specific/contrincante/view.js" charset="UTF-8"></script>
+        <script src="js/specific/contrincante/routes.js" charset="UTF-8"></script>
+        
+        <script src="js/specific/partido/control.js" charset="UTF-8"></script>
+        <script src="js/specific/partido/model.js" charset="UTF-8"></script>
+        <script src="js/specific/partido/view.js" charset="UTF-8"></script>
+        <script src="js/specific/partido/routes.js" charset="UTF-8"></script>
 
 
         <script src="js/specific/tipodocumento/model.js" charset="UTF-8"></script>
@@ -410,6 +420,8 @@
                 fTipoproductoRoutes();
                 fTipodocumentoRoutes();
                 fJugadorRoutes();
+                fContrincanteRoutes();
+                fPartidoRoutes();
 
 
 
