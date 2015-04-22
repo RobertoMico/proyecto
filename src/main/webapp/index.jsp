@@ -358,6 +358,11 @@
         <script src="js/specific/producto/model.js" charset="UTF-8"></script>
         <script src="js/specific/producto/view.js" charset="UTF-8"></script>
         <script src="js/specific/producto/routes.js" charset="UTF-8"></script>
+        
+        <script src="js/specific/jugador/control.js" charset="UTF-8"></script>
+        <script src="js/specific/jugador/model.js" charset="UTF-8"></script>
+        <script src="js/specific/jugador/view.js" charset="UTF-8"></script>
+        <script src="js/specific/jugador/routes.js" charset="UTF-8"></script>
 
 
         <script src="js/specific/tipodocumento/model.js" charset="UTF-8"></script>
@@ -404,6 +409,7 @@
                 fProductoRoutes();
                 fTipoproductoRoutes();
                 fTipodocumentoRoutes();
+                fJugadorRoutes();
 
 
 
