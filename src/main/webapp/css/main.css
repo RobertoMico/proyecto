@@ -13,6 +13,8 @@ body {
     padding-top: 60px;
     padding-bottom: 40px;
     font-size: 12px;
+    background: url("../images/soccer1.jpg") no-repeat fixed;
+
 }
 @media (min-width: 1200px){
     .container {
