@@ -19,10 +19,10 @@
 
 function fJugadorRoutes() {
 
-//    Path.map("#/documento").to(function () {
+//    Path.map("#/jugador").to(function () {
 //        $('#indexContenidoJsp').spinner();
-//        control('documento').list($('#indexContenido'), param().defaultizeUrlObjectParameters({}), null);
-//        //documentoControl.modalListEventsLoading(documentoObject, documentoView, $('#indexContenido'), param().defaultizeUrlObjectParameters({}), null);        
+//        control('jugador').list($('#indexContenido'), param().defaultizeUrlObjectParameters({}), null);
+//        //jugadorControl.modalListEventsLoading(jugadorObject, jugadorView, $('#indexContenido'), param().defaultizeUrlObjectParameters({}), null);        
 //        $('#indexContenidoJsp').empty();
 //        return false;
 //    });
@@ -30,7 +30,7 @@ function fJugadorRoutes() {
     Path.map("#/jugador").to(function () {
         $('#indexContenidoJsp').spinner();
         oJugadorControl.list($('#indexContenido'), param().defaultizeUrlObjectParameters({}), null, oJugadorModel, oJugadorView);
-        //documentoControl.modalListEventsLoading(documentoObject, documentoView, $('#indexContenido'), param().defaultizeUrlObjectParameters({}), null);        
+        //jugadorControl.modalListEventsLoading(jugadorObject, jugadorView, $('#indexContenido'), param().defaultizeUrlObjectParameters({}), null);        
         $('#indexContenidoJsp').empty();
         //$('#indexContenidoJsp').append(oJugadorControl.getClassNameJugador());
         return false;
@@ -63,7 +63,7 @@ function fJugadorRoutes() {
     Path.map("#/jugador/new").to(function () {
         $('#indexContenidoJsp').spinner();
         var paramsObject = param().defaultizeUrlObjectParameters(param().getUrlObjectFromUrlString(this.params['url']));
-        oJugadorControl.new($('#indexContenido'), oJugadorModel, oJugadorView);
+        oJugadorControl.new($('#indexContenido'), null,oJugadorModel, oJugadorView);
         $('#indexContenidoJsp').empty();
         return false;
     });

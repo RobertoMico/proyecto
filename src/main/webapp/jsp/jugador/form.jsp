@@ -26,28 +26,28 @@
     <div class="form-group">
         <label class="col-sm-2 control-label"  for="nombre">Nombre:</label>
         <div class="col-sm-6">
-            <input type="text" id="enunciado" class="form-control"  name="nombre" size="25" placeholder="nombre" />
+            <input type="text" id="nombre" class="form-control"  name="nombre" size="25" placeholder="nombre" />
         </div>
     </div>
     
     <div class="form-group">
         <label class="col-sm-2 control-label" for="ape1">Apellido1:</label> 
         <div class="col-sm-3">           
-            <input type="text" id="enunciado" class="form-control"  name="ape1" size="50" placeholder="ape1" />
+            <input type="text" id="ape1" class="form-control"  name="ape1" size="50" placeholder="ape1" />
         </div>
     </div>
 
     <div class="form-group">
         <label class="col-sm-2 control-label"  for="ape2">Apellido2:</label>
         <div class="col-sm-2">
-            <input type="text"  class="form-control"  id="enunciado" name="ape2" size="50" placeholder="ape2" />
+            <input type="text"  class="form-control"  id="ape2" name="ape2" size="50" placeholder="ape2" />
         </div>
     </div>
     
     <div class="form-group">
         <label class="col-sm-2 control-label"  for="dorsal">Dorsal</label>
         <div class="col-sm-1">
-            <input type="text"  class="form-control"  id="enunciado" name="dorsal" size="2" placeholder="dorsal" />
+            <input type="text"  class="form-control"  id="dorsal" name="dorsal" size="2" placeholder="dorsal" />
         </div>
     </div>
 

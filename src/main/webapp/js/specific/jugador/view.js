@@ -37,7 +37,7 @@ jugadorView.prototype.loadButtons = function (id) {
     botonera += '</div></div>';
     return botonera;
 
-}
+};
 jugadorView.prototype.loadFormValues = function (valores, campos) {
 //                    $('#jugador_form #titulo').val(valores['titulo']);
 //                    $('#jugador_form #contenido').val(valores['contenido']);

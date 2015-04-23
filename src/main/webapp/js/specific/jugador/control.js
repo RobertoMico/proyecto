@@ -23,4 +23,4 @@ jugadorControl.prototype = new control('jugador');
 jugadorControl.prototype.getClassNameJugador = function () {
     return this.getClassName() + "Control";
 };
-var oJugadorControl = new actividadControl('jugador');
+var oJugadorControl = new jugadorControl('jugador');
