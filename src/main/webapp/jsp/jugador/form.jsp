@@ -67,7 +67,7 @@
         
 
 <script type="text/javascript">
-
+/*
     $(document).ready(function() {
         $('#fecha_group').datetimepicker({
             pickTime: false,
@@ -94,39 +94,8 @@
                                     message: 'El valor debe tener como máximo 255 caracteres'
                                 }
                             }
-                        },
-                        evaluacion: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'Debe introducir un número para la evaluacion'
-                                },
-                                integer: {
-                                    message: 'El valor de la evaluacion debe ser un entero'
-                                },
-                                between: {
-                                    min: 1,
-                                    max: 3,
-                                    message: 'La evaluacion debe ser 1, 2 o 3'
-                                }
-                            }
-
                         }
-                    /*    activo: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'Debe introducir un número para el activo'
-                                },
-                                integer: {
-                                    message: 'El valor del activo debe ser un entero'
-                                },
-                                between: {
-                                    min: 0,
-                                    max: 1,
-                                    message: 'El activo debe ser 0 o 1'
-                                }
-                            }
-
-                        } */
+                    
                         
                         
                         
@@ -144,7 +113,7 @@
         
     });       
 
-    
+    */
     
 </script>
      

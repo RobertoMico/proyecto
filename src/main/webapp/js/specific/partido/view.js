@@ -73,6 +73,25 @@ partidoView.prototype.getFormValues = function () {
 
 partidoView.prototype.doEventsLoading = function () {
     var thisObject = this;
+    $('#partidoForm #obj_contrincante_button').unbind('click');
+    $("#partidoForm #obj_contrincante_button").click(function () {
+        var oControl = oPartidoControl;  //para probar dejar partido
+        //vista('usuario').cargaModalBuscarClaveAjena('#modal01', "partido");
+
+        $("#partidoForm").append(thisObject.getEmptyModal());
+        util().loadForm('#modal01', thisObject.getFormHeader('Elección de usuario'), "", thisObject.getFormFooter(), true);
+
+        $('#partidoForm').append(thisObject.getEmptyModal());
+
+        oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oPartidoModel, oPartidoView);
+        oControl.modalListEventsLoading('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), function (id) {
+            $('#obj_contrincante_id').val(id).change();
+            $('#obj_contrincante_desc').text(decodeURIComponent(oContrincanteModel.getMeAsAForeignKey(id)));
+            $('#modal01').modal('hide');
+
+        },oPartidoModel, oPartidoView);
+        return false;
+    });
    
 
    

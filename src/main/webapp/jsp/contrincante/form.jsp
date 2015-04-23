@@ -46,7 +46,7 @@
 
 
 <script type="text/javascript">
-
+/*
     $(document).ready(function() {
         $('#alta_group').datetimepicker({
             pickTime: false,
@@ -86,7 +86,7 @@
                 });
     });
 
-
+*/
 
 </script>
      

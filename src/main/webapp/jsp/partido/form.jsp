@@ -67,7 +67,7 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function() {
+ /*   $(document).ready(function() {
         $('#alta_group').datetimepicker({
             pickTime: false,
             language: 'es',
@@ -144,6 +144,6 @@
     });       
     });
     
-    
+    */
 </script>
      

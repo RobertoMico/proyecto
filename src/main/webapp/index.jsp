@@ -373,6 +373,8 @@
         <script src="js/specific/partido/model.js" charset="UTF-8"></script>
         <script src="js/specific/partido/view.js" charset="UTF-8"></script>
         <script src="js/specific/partido/routes.js" charset="UTF-8"></script>
+        
+
 
 
         <script src="js/specific/tipodocumento/model.js" charset="UTF-8"></script>
@@ -422,6 +424,7 @@
                 fJugadorRoutes();
                 fContrincanteRoutes();
                 fPartidoRoutes();
+ 
 
 
 
