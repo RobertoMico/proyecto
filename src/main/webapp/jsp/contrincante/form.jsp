@@ -16,7 +16,7 @@
  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 --%>
 
-<form class="form-horizontal" role="form" action="#" id="documentoForm" name="formulario">
+<form class="form-horizontal" role="form" action="#" id="contrincanteForm" name="formulario">
     <div class="form-group">
         <label class="col-sm-2 control-label" for="id">Id:</label>
         <div class="col-sm-2">
@@ -26,7 +26,7 @@
     <div class="form-group">
         <label class="col-sm-2 control-label"  for="contrincante">Contrincante:</label>
         <div class="col-sm-6">
-            <input type="text" id="titulo" class="form-control"  name="contrincante" size="50" placeholder="contrincante" />
+            <input type="text" id="tipo" class="form-control"  name="contrincante" size="50" placeholder="contrincante" />
         </div>
     </div>
 
@@ -46,20 +46,9 @@
 
 
 <script type="text/javascript">
-/*
+
     $(document).ready(function() {
-        $('#alta_group').datetimepicker({
-            pickTime: false,
-            language: 'es',
-            showToday: true
-        });
-        $('#cambio_group').datetimepicker({
-            pickTime: false,
-            language: 'es',
-            showToday: true
-        });
-        //http://jqueryvalidation.org/documentation/
-        $('#cuestionarioForm')
+        $('#contrincanteForm')
                 .bootstrapValidator({
                     container: '#messages',
                     feedbackIcons: {
@@ -86,7 +75,7 @@
                 });
     });
 
-*/
+
 
 </script>
      

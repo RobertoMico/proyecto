@@ -23,9 +23,9 @@
             <input type="text" id="id" class="form-control"  name="id" placeholder="id" />
         </div>
     </div>
-    
 
-    
+
+
     <div class="form-group">
         <label class="col-sm-2 control-label" for="fecha">Fecha:</label> 
         <div class="col-sm-3">           
@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    
+
     <div class="form-group">
         <label class="col-sm-2 control-label" for="obj_contrincante_id">Id_contrincante: </label> 
         <div class="col-sm-2">              
@@ -62,12 +62,12 @@
         <label class="col-sm-7" for="obj_contrincante_desc" id="obj_contrincante_desc"></label>                     
     </div>
 
-  </form>
-        
+</form>
+
 
 <script type="text/javascript">
 
- /*   $(document).ready(function() {
+    $(document).ready(function () {
         $('#alta_group').datetimepicker({
             pickTime: false,
             language: 'es',
@@ -78,72 +78,71 @@
             language: 'es',
             showToday: true
         });
-    
+
         //http://jqueryvalidation.org/documentation/
         $('#partidoForm')
                 .bootstrapValidator({
-                    container: '#messages',
-                    feedbackIcons: {
+                container: '#messages',
+                        feedbackIcons: {
                         valid: 'glyphicon glyphicon-ok',
-                        invalid: 'glyphicon glyphicon-remove',
-                        validating: 'glyphicon glyphicon-refresh'
-                    },
-                     fields: {
+                                invalid: 'glyphicon glyphicon-remove',
+                                validating: 'glyphicon glyphicon-refresh'
+                        },
+                        fields: {
                         id: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'Debe introducir un id'
-                                }                        
-                            }
+                        validators: {
+                        notEmpty: {
+                        message: 'Debe introducir un id'
+                        }
+                        }
                         },
-                        observaciones: {
-                            validators: {
+                                observaciones: {
+                                validators: {
                                 notEmpty: {
-                                    message: 'Debe introducir contenido'
+                                message: 'Debe introducir contenido'
                                 }
-                            }
-                        },
-                        fecha: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'Debe introducir una fecha de alta'
+                                }
                                 },
-                                date: {
-                                    format: 'DD/MM/YYYY',
-                                    message: 'La fecha de alta no tiene formato DD/MM/YYYY'
-                                }
-                            }
-                        },
-                        id_usuario: {
-                            validators: {
+                                fecha: {
+                                validators: {
                                 notEmpty: {
-                                    message: 'Debe elegir un usuario'
+                                message: 'Debe introducir una fecha de alta'
                                 },
-                                integer: {
-                                    message: 'El identificador de usuario debe ser un entero'
+                                        date: {
+                                        format: 'DD/MM/YYYY',
+                                                message: 'La fecha de alta no tiene formato DD/MM/YYYY'
+                                        }
                                 }
-                            }
-                        },                        
-                })
-                .on('change', '[name="id_usuario"]', function() {
-                    $('#documentoForm').bootstrapValidator('revalidateField', 'id_usuario');
-                })
+                                },
+                                id_usuario: {
+                                validators: {
+                                notEmpty: {
+                                message: 'Debe elegir un usuario'
+                                },
+                                        integer: {
+                                        message: 'El identificador de usuario debe ser un entero'
+                                        }
+                                }
+                                },
+                        })
+                        .on('change', '[name="id_usuario"]', function () {
+                            $('#documentoForm').bootstrapValidator('revalidateField', 'id_usuario');
+                        })
 
-                .on('change', '[name="id_tipodocumento"]', function() {
-                    $('#documentoForm').bootstrapValidator('revalidateField', 'id_tipodocumento');
-                })
-                ;
-        $('#alta_group').on('dp.change dp.show', function(e) {
+                        .on('change', '[name="id_tipodocumento"]', function () {
+                            $('#documentoForm').bootstrapValidator('revalidateField', 'id_tipodocumento');
+                        })
+                        ;
+                        $('#alta_group').on('dp.change dp.show', function (e) {
 // Revalidate the date when user change it
-            $('#documentoForm').bootstrapValidator('revalidateField', 'alta_group');
-        });
-        $('#cambio_group').on('dp.change dp.show', function(e) {
+                    $('#documentoForm').bootstrapValidator('revalidateField', 'alta_group');
+                });
+                $('#cambio_group').on('dp.change dp.show', function (e) {
 // Revalidate the date when user change it
-            $('#documentoForm').bootstrapValidator('revalidateField', 'cambio_group');
-        });
-    });       
+                    $('#documentoForm').bootstrapValidator('revalidateField', 'cambio_group');
+                });
+                });
     });
-    
-    */
+
+
 </script>
-     

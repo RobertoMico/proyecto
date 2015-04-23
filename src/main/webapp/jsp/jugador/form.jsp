@@ -29,7 +29,7 @@
             <input type="text" id="nombre" class="form-control"  name="nombre" size="25" placeholder="nombre" />
         </div>
     </div>
-    
+
     <div class="form-group">
         <label class="col-sm-2 control-label" for="ape1">Apellido1:</label> 
         <div class="col-sm-3">           
@@ -43,7 +43,7 @@
             <input type="text"  class="form-control"  id="ape2" name="ape2" size="50" placeholder="ape2" />
         </div>
     </div>
-    
+
     <div class="form-group">
         <label class="col-sm-2 control-label"  for="dorsal">Dorsal</label>
         <div class="col-sm-1">
@@ -57,6 +57,8 @@
         </div>
     </div>
 
+
+
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <button class="btn btn-primary" id="submitForm">Guardar</button>
@@ -64,17 +66,12 @@
     </div>
 
 </form>
-        
+
 
 <script type="text/javascript">
-/*
-    $(document).ready(function() {
-        $('#fecha_group').datetimepicker({
-            pickTime: false,
-            language: 'es',
-            showToday: true
-        });
-        //http://jqueryvalidation.org/documentation/
+
+    $(document).ready(function () {
+     
         $('#jugadorForm')
                 .bootstrapValidator({
                     container: '#messages',
@@ -84,7 +81,7 @@
                         validating: 'glyphicon glyphicon-refresh'
                     },
                     fields: {
-                        enunciado: {
+                        nombre: {
                             validators: {
                                 notEmpty: {
                                     message: 'Debe introducir un valor'
@@ -94,26 +91,42 @@
                                     message: 'El valor debe tener como máximo 255 caracteres'
                                 }
                             }
+                        },
+                        ape1: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Debe introducir un valor'
+                                },
+                                stringLength: {
+                                    max: 255,
+                                    message: 'El valor debe tener como máximo 255 caracteres'
+                                }
+                            }
+                        },
+                        ape2: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Debe introducir un valor'
+                                },
+                                stringLength: {
+                                    max: 255,
+                                    message: 'El valor debe tener como máximo 255 caracteres'
+                                }
+                            }
+                        },
+                        dorsal: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Debe introducir un valor'
+                                },
+                                stringLength: {
+                                    max: 2,
+                                    message: 'El valor debe tener como máximo 2 caracteres'
+                                }
+                            }
                         }
-                    
                         
-                        
-                        
-
                     }
-                })
-                
-
-                
-                ;
-        $('#fecha_group').on('dp.change dp.show', function(e) {
-// Revalidate the date when user change it
-            $('#jugadorForm').bootstrapValidator('revalidateField', 'fecha_group');
-        });
-        
-    });       
-
-    */
-    
+                });
+    });
 </script>
-     
