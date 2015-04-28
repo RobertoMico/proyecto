@@ -382,6 +382,11 @@
         <script src="js/specific/partido/view.js" charset="UTF-8"></script>
         <script src="js/specific/partido/routes.js" charset="UTF-8"></script>
         
+        <script src="js/specific/estadistica/control.js" charset="UTF-8"></script>
+        <script src="js/specific/estadistica/model.js" charset="UTF-8"></script>
+        <script src="js/specific/estadistica/view.js" charset="UTF-8"></script>
+        <script src="js/specific/estadistica/routes.js" charset="UTF-8"></script>
+        
 
 
 
@@ -434,6 +439,7 @@
                 fJugadorRoutes();
                 fContrincanteRoutes();
                 fPartidoRoutes();
+                fEstadisticaRoutes();
  
 
 

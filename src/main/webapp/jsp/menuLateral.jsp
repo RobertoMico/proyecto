@@ -75,6 +75,7 @@
         <a  class="list-group-item" id="lnkJugador" href="jsp#/jugador">Jugador</a>
         <a  class="list-group-item" id="lnkContrincante" href="jsp#/contrincante">Contrincante</a>
         <a  class="list-group-item" id="lnkPartido" href="jsp#/partido">Partido</a>
+        <a  class="list-group-item" id="lnkEstadistica" href="jsp#/estadistica">Estadistica</a>
     </div>
 </div>
 
