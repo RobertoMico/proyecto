@@ -36,7 +36,7 @@ contrincanteControl.prototype.make = function (place, id, oModel, oModelSet, oVi
             oContrincanteView.getEmptyView("contrincanteForm", 1)));
     $("#formularioContrincante").html(formularioHTML);
     $("#validadorContrincante").html(validadorHTML);
-    
+
     $('#submitForm').click(function () {
         oView.okValidation(function (e) {
             var valores = [];

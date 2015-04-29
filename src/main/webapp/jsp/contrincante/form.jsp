@@ -24,9 +24,9 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="col-sm-2 control-label"  for="contrincante">Contrincante:</label>
+        <label class="col-sm-2 control-label"  for="nombre">Contrincante:</label>
         <div class="col-sm-6">
-            <input type="text" id="tipo" class="form-control"  name="contrincante" size="50" placeholder="contrincante" />
+            <input type="text" id="nombre" class="form-control"  name="nombre" size="50" placeholder="contrincante" />
         </div>
     </div>
 
@@ -47,7 +47,7 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#contrincanteForm')
                 .bootstrapValidator({
                     container: '#messages',
@@ -57,20 +57,17 @@
                         validating: 'glyphicon glyphicon-refresh'
                     },
                     fields: {
-                        id: {
+                        nombre: {
                             validators: {
                                 notEmpty: {
-                                    message: 'Debe introducir un id'
+                                    message: 'Debe introducir un valor'
                                 },
-                            }
-                        },
-                        tipo: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'Debe introducir tipo'
+                                stringLength: {
+                                    max: 255,
+                                    message: 'El valor debe tener como máximo 255 caracteres'
                                 }
                             }
-                        },
+                        }
                     }
                 });
     });
@@ -78,4 +75,4 @@
 
 
 </script>
-     
+

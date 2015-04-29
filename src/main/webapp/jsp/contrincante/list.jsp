@@ -24,7 +24,7 @@
     ArrayList<String> alColumnsNames;
     Iterator<String> oIterador;
     String strNombreMantenimiento = "contrincante";
-    Connection connection = (Connection) request.getAttribute("connection");    
+    Connection connection = (Connection) request.getAttribute("connection");
 %>
 <div class="row">
     <div class="col-md-12">

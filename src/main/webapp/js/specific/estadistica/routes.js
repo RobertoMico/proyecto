@@ -63,7 +63,7 @@ function fEstadisticaRoutes() {
     Path.map("#/estadistica/new").to(function () {
         $('#indexContenidoJsp').spinner();
         var paramsObject = param().defaultizeUrlObjectParameters(param().getUrlObjectFromUrlString(this.params['url']));
-        oEstadisticaControl.new($('#indexContenido'), null,oEstadisticaModel, oEstadisticaView);
+        oEstadisticaControl.new($('#indexContenido'), null, oEstadisticaModel, oEstadisticaView);
         $('#indexContenidoJsp').empty();
         return false;
     });

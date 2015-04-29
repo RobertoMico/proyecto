@@ -63,7 +63,7 @@ function fJugadorRoutes() {
     Path.map("#/jugador/new").to(function () {
         $('#indexContenidoJsp').spinner();
         var paramsObject = param().defaultizeUrlObjectParameters(param().getUrlObjectFromUrlString(this.params['url']));
-        oJugadorControl.new($('#indexContenido'), null,oJugadorModel, oJugadorView);
+        oJugadorControl.new($('#indexContenido'), null, oJugadorModel, oJugadorView);
         $('#indexContenidoJsp').empty();
         return false;
     });

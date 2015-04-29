@@ -35,7 +35,7 @@ partidoView.prototype.loadButtons = function (id) {
     botonera += '<a class="btn btn-default edit" id="' + id + '"  href="jsp#/' + this.clase + '/edit/' + id + '"><i class="glyphicon glyphicon-pencil"></i></a>';
     botonera += '<a class="btn btn-default remove" id="' + id + '"  href="jsp#/' + this.clase + '/remove/' + id + '"><i class="glyphicon glyphicon-remove"></i></a>';
     //solo cuando sea administrador
-    botonera += '<a class="btn btn-default remove" id="' + id + '"  href="jsp#/' + this.clase + '/list/page=1&id=1&rpp=10&vf=4&filter=id&filteroperator=like&filtervalue='+id+'"><i class="glyphicon glyphicon-remove"></i></a>';
+    botonera += '<a class="btn btn-default remove" id="' + id + '"  href="jsp#/' + this.clase + '/list/page=1&id=1&rpp=10&vf=4&filter=id&filteroperator=like&filtervalue=' + id + '"><i class="glyphicon glyphicon-remove"></i></a>';
     botonera += '</div></div>';
     return botonera;
 
@@ -79,7 +79,7 @@ partidoView.prototype.doEventsLoading = function () {
         //vista('usuario').cargaModalBuscarClaveAjena('#modal01', "partido");
 
         $("#partidoForm").append(thisObject.getEmptyModal());
-        util().loadForm('#modal01', thisObject.getFormHeader('Elección de usuario'), "", thisObject.getFormFooter(), true);
+        util().loadForm('#modal01', thisObject.getFormHeader('Elección de contrincante'), "", thisObject.getFormFooter(), true);
 
         $('#partidoForm').append(thisObject.getEmptyModal());
 
@@ -89,12 +89,12 @@ partidoView.prototype.doEventsLoading = function () {
             $('#obj_contrincante_desc').text(decodeURIComponent(oContrincanteModel.getMeAsAForeignKey(id)));
             $('#modal01').modal('hide');
 
-        },oPartidoModel, oPartidoView);
+        }, oPartidoModel, oPartidoView);
         return false;
     });
-   
 
-   
+
+
 };
 
 partidoView.prototype.okValidation = function (f) {

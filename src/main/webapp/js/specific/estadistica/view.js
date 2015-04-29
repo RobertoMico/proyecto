@@ -71,27 +71,28 @@ estadisticaView.prototype.getFormValues = function () {
 
 estadisticaView.prototype.doEventsLoading = function () {
     var thisObject = this;
-    $('#estadisticaForm #obj_usuario_button').unbind('click');
-    $("#estadisticaForm #obj_usuario_button").click(function () {
+    $('#estadisticaForm #obj_jugador_button').unbind('click');
+    $("#estadisticaForm #obj_jugador_button").click(function () {
         var oControl = oEstadisticaControl;  //para probar dejar estadistica
         //vista('usuario').cargaModalBuscarClaveAjena('#modal01', "estadistica");
 
         $("#estadisticaForm").append(thisObject.getEmptyModal());
-        util().loadForm('#modal01', thisObject.getFormHeader('Elección de usuario'), "", thisObject.getFormFooter(), true);
+        util().loadForm('#modal01', thisObject.getFormHeader('Elección de jugador'), "", thisObject.getFormFooter(), true);
 
         $('#estadisticaForm').append(thisObject.getEmptyModal());
 
         oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oEstadisticaModel, oEstadisticaView);
         oControl.modalListEventsLoading('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), function (id) {
-            $('#obj_usuario_id').val(id).change();
-            $('#obj_usuario_desc').text(decodeURIComponent(oUsuarioModel.getMeAsAForeignKey(id)));
+            $('#obj_jugador_id').val(id).change();
+            $('#obj_jugador_desc').text(decodeURIComponent(oJugadorModel.getMeAsAForeignKey(id)));
             $('#modal01').modal('hide');
 
-        },oEstadisticaModel, oEstadisticaView);
+        }, oEstadisticaModel, oEstadisticaView);
         return false;
     });
-    $('#estadisticaForm #obj_tipoestadistica_button').unbind('click');
-    $("#estadisticaForm #obj_tipoestadistica_button").click(function () {
+
+    $('#estadisticaForm #obj_partido_button').unbind('click');
+    $("#estadisticaForm #obj_partido_button").click(function () {
         var oControl = oEstadisticaControl;
 
         $("#estadisticaForm").append(thisObject.getEmptyModal());
@@ -101,13 +102,15 @@ estadisticaView.prototype.doEventsLoading = function () {
 
         oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oEstadisticaModel, oEstadisticaView);
         oControl.modalListEventsLoading('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), function (id) {
-            $('#obj_tipoestadistica_id').val(id).change();
-            $('#obj_tipoestadistica_desc').text(decodeURIComponent(oTipoestadisticaModel.getMeAsAForeignKey(id)));
+            $('#obj_partido_id').val(id).change();
+            $('#obj_partido_desc').text(decodeURIComponent(oPartidoModel.getMeAsAForeignKey(id)));
             $('#modal01').modal('hide');
 
-        },oEstadisticaModel, oEstadisticaView);
+        }, oEstadisticaModel, oEstadisticaView);
         return false;
     });
+
+
     $('#contenido_button').unbind('click');
     $('#contenido_button').click(function () {
         //cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>' + '<h3 id="myModalLabel">Edición de contenidos</h3>';

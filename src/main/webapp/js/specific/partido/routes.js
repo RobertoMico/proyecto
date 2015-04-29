@@ -63,7 +63,7 @@ function fPartidoRoutes() {
     Path.map("#/partido/new").to(function () {
         $('#indexContenidoJsp').spinner();
         var paramsObject = param().defaultizeUrlObjectParameters(param().getUrlObjectFromUrlString(this.params['url']));
-        oPartidoControl.new($('#indexContenido'), null,oPartidoModel, oPartidoView);
+        oPartidoControl.new($('#indexContenido'), null, oPartidoModel, oPartidoView);
         $('#indexContenidoJsp').empty();
         return false;
     });
@@ -75,8 +75,8 @@ function fPartidoRoutes() {
         $('#indexContenidoJsp').empty();
         return false;
     });
-    
-        Path.map("#/partido/partidousuario/:id").to(function () {
+
+    Path.map("#/partido/partidousuario/:id").to(function () {
         $('#indexContenidoJsp').spinner();
         var paramsObject = param().defaultizeUrlObjectParameters(param().getUrlObjectFromUrlString(this.params['url']));
         oPartidoControl.list($('#indexContenido'), paramsObject['id'], oPartidoModel, oPartidoView);

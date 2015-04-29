@@ -71,7 +71,7 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
-     
+        
         $('#jugadorForm')
                 .bootstrapValidator({
                     container: '#messages',
@@ -125,7 +125,7 @@
                                 }
                             }
                         }
-                        
+
                     }
                 });
     });

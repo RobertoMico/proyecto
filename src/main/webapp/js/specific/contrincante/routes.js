@@ -63,7 +63,7 @@ function fContrincanteRoutes() {
     Path.map("#/contrincante/new").to(function () {
         $('#indexContenidoJsp').spinner();
         var paramsObject = param().defaultizeUrlObjectParameters(param().getUrlObjectFromUrlString(this.params['url']));
-        oContrincanteControl.new($('#indexContenido'),null, oContrincanteModel, oContrincanteView);
+        oContrincanteControl.new($('#indexContenido'), null, oContrincanteModel, oContrincanteView);
         $('#indexContenidoJsp').empty();
         return false;
     });

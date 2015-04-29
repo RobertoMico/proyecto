@@ -19,11 +19,11 @@ package net.daw.helper;
 
 /**
  *
- * @author rafa
+ * @author Roberto
  */
 public class AppInformationHelper {
 
     public static String getAppName() {
-        return "ausiàsYield";
+        return "U.D. La Plata";
     }
 }

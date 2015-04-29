@@ -117,7 +117,7 @@ contrincanteView.prototype.getValidationForm = function (jason) {
             validador += "pregunta_" + idpregunta + ": {\n\
          validators: {\n\
          notEmpty: {\n\
-         message: 'Debe contestar a la pregunta: "+pregunta+"'\n\
+         message: 'Debe contestar a la pregunta: " + pregunta + "'\n\
          }\n\
          }\n\
          },\n";

@@ -87,7 +87,7 @@ jugadorView.prototype.doEventsLoading = function () {
             $('#obj_usuario_desc').text(decodeURIComponent(oUsuarioModel.getMeAsAForeignKey(id)));
             $('#modal01').modal('hide');
 
-        },oJugadorModel, oJugadorView);
+        }, oJugadorModel, oJugadorView);
         return false;
     });
     $('#jugadorForm #obj_tipojugador_button').unbind('click');
@@ -105,7 +105,7 @@ jugadorView.prototype.doEventsLoading = function () {
             $('#obj_tipojugador_desc').text(decodeURIComponent(oTipojugadorModel.getMeAsAForeignKey(id)));
             $('#modal01').modal('hide');
 
-        },oJugadorModel, oJugadorView);
+        }, oJugadorModel, oJugadorView);
         return false;
     });
     $('#contenido_button').unbind('click');

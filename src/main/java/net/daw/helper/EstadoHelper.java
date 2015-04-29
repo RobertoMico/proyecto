@@ -34,11 +34,11 @@ public class EstadoHelper {
     }
 
     public static String getFecha() {
-        return "15/10/2014";
+        return "28/04/2014";
     }
 
     public static String getAnyo() {
-        return "2014";
+        return "2015";
     }
 
     public static String getCurso() {
@@ -46,11 +46,11 @@ public class EstadoHelper {
     }
 
     public static String getAutor() {
-        return "Rafael Aznar & alumnos";
+        return "Roberto Micó";
     }
 
     public static String getMailAutor() {
-        return "rafaaznar{at}gmail{dot}com";
+        return "roberto.mico.martinez@gmail.com";
     }
 
     public static String getLicenciaLink() {

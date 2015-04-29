@@ -23,11 +23,11 @@
             <input type="text" id="id" class="form-control"  name="id" placeholder="id" />
         </div>
     </div>
-    
-    
-    
-    
-    
+
+
+
+
+
     <div class="form-group">
         <label class="col-sm-2 control-label" for="obj_jugador_id">Id_jugador: </label> 
         <div class="col-sm-2">              
@@ -38,11 +38,11 @@
         </div>        
         <label class="col-sm-7" for="obj_jugador_desc" id="obj_jugador_desc"></label>                     
     </div>
-    
-    
-    
-    
-    
+
+
+
+
+
     <div class="form-group">
         <label class="col-sm-2 control-label" for="obj_partido_id">Id_partido: </label> 
         <div class="col-sm-2">              
@@ -53,32 +53,32 @@
         </div>        
         <label class="col-sm-6" for="obj_partido_desc" id="obj_partido_desc"></label>                     
     </div>
-    
+
     <div class="form-group">
         <label class="col-sm-2 control-label"  for="goles">Goles a favor:</label>
         <div class="col-sm-1">
-            <input type="text" id="nombre" class="form-control"  name="goles" size="2" placeholder="goles" />
+            <input type="text" id="goles" class="form-control"  name="goles" size="2" placeholder="goles" />
         </div>
     </div>
 
     <div class="form-group">
         <label class="col-sm-2 control-label" for="asistencias">Asistencias:</label> 
         <div class="col-sm-3">           
-            <input type="text" id="ape1" class="form-control"  name="asistencias" size="50" placeholder="asistencias" />
+            <input type="text" id="asistencias" class="form-control"  name="asistencias" size="50" placeholder="asistencias" />
         </div>
     </div>
 
     <div class="form-group">
         <label class="col-sm-2 control-label"  for="tarjetasrojas">Tarjetasrojas:</label>
         <div class="col-sm-2">
-            <input type="text"  class="form-control"  id="ape2" name="tarjetasrojas" size="50" placeholder="tarjetasrojas" />
+            <input type="text"  class="form-control"  id="tarjetasrojas" name="tarjetasrojas" size="50" placeholder="tarjetasrojas" />
         </div>
     </div>
 
     <div class="form-group">
         <label class="col-sm-2 control-label"  for="tarjetasamarillas">Tarjetasamarillas:</label>
         <div class="col-sm-2">
-            <input type="text"  class="form-control"  id="dorsal" name="tarjetasamarillas" size="2" placeholder="tarjetasamarillas" />
+            <input type="text"  class="form-control"  id="tarjetasamarillas" name="tarjetasamarillas" size="2" placeholder="tarjetasamarillas" />
         </div>
     </div>
 
@@ -102,7 +102,7 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
-     
+
         $('#estadisticaForm')
                 .bootstrapValidator({
                     container: '#messages',
@@ -112,7 +112,7 @@
                         validating: 'glyphicon glyphicon-refresh'
                     },
                     fields: {
-                        nombre: {
+                        goles: {
                             validators: {
                                 notEmpty: {
                                     message: 'Debe introducir un valor'
@@ -123,7 +123,7 @@
                                 }
                             }
                         },
-                        ape1: {
+                        asistencias: {
                             validators: {
                                 notEmpty: {
                                     message: 'Debe introducir un valor'
@@ -134,29 +134,29 @@
                                 }
                             }
                         },
-                        ape2: {
+                        tarjetasrojas: {
                             validators: {
                                 notEmpty: {
                                     message: 'Debe introducir un valor'
                                 },
                                 stringLength: {
-                                    max: 255,
-                                    message: 'El valor debe tener como máximo 255 caracteres'
+                                    max: 1,
+                                    message: 'El valor debe tener como máximo 1 caracter'
                                 }
                             }
                         },
-                        dorsal: {
+                        tarjetasamarillas: {
                             validators: {
                                 notEmpty: {
                                     message: 'Debe introducir un valor'
                                 },
                                 stringLength: {
-                                    max: 2,
-                                    message: 'El valor debe tener como máximo 2 caracteres'
+                                    max: 1,
+                                    message: 'El valor debe tener como máximo 1 caracter'
                                 }
                             }
                         }
-                        
+
                     }
                 });
     });

@@ -29,8 +29,8 @@
     <div class="form-group">
         <label class="col-sm-2 control-label" for="fecha">Fecha:</label> 
         <div class="col-sm-3">           
-            <div class='input-group date' id='alta_group'>
-                <input type='text' class="form-control" id='fecha' name="fecha" placeholder="Fecha" />
+            <div class='input-group date' id='fecha_group'>
+                <input type='text' class="form-control" id='fecha_group' name="fecha" placeholder="Fecha" />
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
                 </span>
@@ -39,14 +39,9 @@
     </div>
 
     <div class="form-group">
-        <label class="col-sm-2 control-label" for="golescontra">Goles en Contra:</label> 
-        <div class="col-sm-3">      
-            <div class='input-group date' id='cambio_group'>
-                <input type='text' class="form-control" id='cambio' name="golescontra" placeholder="golescontra" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
+        <label class="col-sm-2 control-label" for="golescontra">Goles en contra:</label> 
+        <div class="col-sm-3">           
+            <input type="text" id="golescontra" class="form-control"  name="golescontra" size="50" placeholder="goles en contra" />
         </div>
     </div>
 
@@ -61,86 +56,65 @@
         </div>        
         <label class="col-sm-7" for="obj_contrincante_desc" id="obj_contrincante_desc"></label>                     
     </div>
+    
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div id="messages"></div>
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-primary" id="submitForm">Guardar</button>
+        </div>
+    </div>
 
 </form>
 
 
 <script type="text/javascript">
 
-    $(document).ready(function () {
-        $('#alta_group').datetimepicker({
+   $(document).ready(function () {
+       $('#fecha_group').datetimepicker({
             pickTime: false,
             language: 'es',
             showToday: true
         });
-        $('#cambio_group').datetimepicker({
-            pickTime: false,
-            language: 'es',
-            showToday: true
-        });
-
-        //http://jqueryvalidation.org/documentation/
         $('#partidoForm')
                 .bootstrapValidator({
-                container: '#messages',
-                        feedbackIcons: {
+                    container: '#messages',
+                    feedbackIcons: {
                         valid: 'glyphicon glyphicon-ok',
-                                invalid: 'glyphicon glyphicon-remove',
-                                validating: 'glyphicon glyphicon-refresh'
+                        invalid: 'glyphicon glyphicon-remove',
+                        validating: 'glyphicon glyphicon-refresh'
+                    },
+                    fields: {
+                        fecha_group: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Debe introducir una fecha'
+                                },
+                                date: {
+                                    format: 'DD/MM/YYYY',
+                                    message: 'La fecha no tiene formato DD/MM/YYYY'
+                                }
+                            }
                         },
-                        fields: {
-                        id: {
-                        validators: {
-                        notEmpty: {
-                        message: 'Debe introducir un id'
+                        golescontra: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Debe introducir un valor'
+                                },
+                                stringLength: {
+                                    max: 255,
+                                    message: 'El valor debe tener como máximo 255 caracteres'
+                                }
+                            }
                         }
-                        }
-                        },
-                                observaciones: {
-                                validators: {
-                                notEmpty: {
-                                message: 'Debe introducir contenido'
-                                }
-                                }
-                                },
-                                fecha: {
-                                validators: {
-                                notEmpty: {
-                                message: 'Debe introducir una fecha de alta'
-                                },
-                                        date: {
-                                        format: 'DD/MM/YYYY',
-                                                message: 'La fecha de alta no tiene formato DD/MM/YYYY'
-                                        }
-                                }
-                                },
-                                id_usuario: {
-                                validators: {
-                                notEmpty: {
-                                message: 'Debe elegir un usuario'
-                                },
-                                        integer: {
-                                        message: 'El identificador de usuario debe ser un entero'
-                                        }
-                                }
-                                },
-                        })
-                        .on('change', '[name="id_usuario"]', function () {
-                            $('#documentoForm').bootstrapValidator('revalidateField', 'id_usuario');
-                        })
 
-                        .on('change', '[name="id_tipodocumento"]', function () {
-                            $('#documentoForm').bootstrapValidator('revalidateField', 'id_tipodocumento');
-                        })
-                        ;
-                        $('#alta_group').on('dp.change dp.show', function (e) {
-// Revalidate the date when user change it
-                    $('#documentoForm').bootstrapValidator('revalidateField', 'alta_group');
-                });
-                $('#cambio_group').on('dp.change dp.show', function (e) {
-// Revalidate the date when user change it
-                    $('#documentoForm').bootstrapValidator('revalidateField', 'cambio_group');
-                });
+                    }
                 });
     });
 
