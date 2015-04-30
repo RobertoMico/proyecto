@@ -36,25 +36,27 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ajax Yield</title>
+        <title>U.D. La Plata</title>
         <meta name="description" content="">
+        <link rel="stylesheet" href="css/styles.css">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
         <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
+        
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrapValidator.min.css">
         <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"  />
+        
+        
+    <!--  
         <link rel="stylesheet" href="css/producto.css">
-        <link rel="stylesheet" href="css/styles.css">
-
-
         <% if (user != null) {%>
         <link rel="stylesheet" href="css/skin/<%=user.getSkin()%>.css">
         <% } else {%>
         <link rel="stylesheet" href="css/skin/main.css">
-        <% }%>
-
+        <% }%>       
+    -->
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -67,7 +69,7 @@
         <![endif]-->
 
         <!-- Fixed navbar -->
-        <div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar">
             <div class="container barra">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

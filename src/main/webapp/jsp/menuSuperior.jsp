@@ -28,7 +28,7 @@
 %>
 
 <ul class="nav navbar-nav">
-    <li><a href="jsp">Inicio</a></li>
+    <li><a class="inicio" href="jsp">Inicio</a></li>
     <%if (id_tipousuario == 1) {%>
     <li><a href="jsp#/usuario">Usuarios</a></li>
     <li class="dropdown">

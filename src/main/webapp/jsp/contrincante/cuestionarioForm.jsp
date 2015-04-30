@@ -4,5 +4,5 @@
     Author     : al038513
 --%>
 
-<div id="formularioCuestionario"></div>
-<div id="validadorCuestionario"></div>
+<div id="formularioContrincante"></div>
+<div id="validadorContrincante"></div>
