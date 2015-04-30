@@ -173,7 +173,7 @@ public class ControlOperationGenImpl implements ControlOperationInterface {
             result = oService.remove(ParameterCooker.prepareId(request));
             closeDB();
         //} else {
-            result = "error";
+            //result = "error";
         //}
         return result;
     }
