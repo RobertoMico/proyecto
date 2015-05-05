@@ -19,6 +19,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0232b5', end
     color:#FFFFFF;
     font-size: 1.5em;
     transition: 0.2s;
+    font-family: 'Titillium Web', sans-serif;
+
 }
 
 
@@ -27,5 +29,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0232b5', end
     opacity: 0.9;
 }
 
+.menu1{
+    margin-left: -20%;
+    margin-right: 20%;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
 
+}
 
+.menu2{
+    
+    transition: 0.2s;
+}
+
+.menu2:hover{
+  margin-left: 20%;
+  margin-right: -20%;
+}

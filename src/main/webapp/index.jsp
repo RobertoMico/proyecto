@@ -41,7 +41,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
         <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
         
         <link rel="stylesheet" href="css/animate.css">

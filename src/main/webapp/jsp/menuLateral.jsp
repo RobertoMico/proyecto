@@ -26,54 +26,49 @@
     }
 %>
 
-<div class="panel panel-primary">
+<div class="panel menu1 panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">Sesión</h3>
     </div>
     <div class="list-group">
-        <a class="list-group-item" id="lnkHome"  href="jsp">Home</a>
-        <a class="list-group-item"  id="lnkLogout" href="jsp?ob=usuario&op=logout">Logout</a>
+        <a class="list-group-item menu2" id="lnkHome"  href="jsp">Home</a>
+        <a class="list-group-item menu2"  id="lnkLogout" href="jsp?ob=usuario&op=logout">Logout</a>
     </div>
 </div>
-<div class="panel panel-primary">
+<div class="panel menu1 panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">Gestión de Usuarios</h3>
     </div>
     <div class="list-group">
-        <a  class="list-group-item" id="lnkUsuario" href="jsp#/usuario">Usuario</a>
+        <a  class="list-group-item menu2" id="lnkUsuario" href="jsp#/usuario">Usuario</a>
     </div>
 </div>
 
 
-<div class="panel panel-primary">
+<div class="panel menu1 panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">Mantenimientos</h3>
     </div>
     <div class="list-group">
-        <a  class="list-group-item" id="lnkJugador" href="jsp#/jugador">Jugador</a>
-        <a  class="list-group-item" id="lnkContrincante" href="jsp#/contrincante">Contrincante</a>
-        <a  class="list-group-item" id="lnkPartido" href="jsp#/partido">Partido</a>
-        <a  class="list-group-item" id="lnkEstadistica" href="jsp#/estadistica">Estadistica</a>
+        <a  class="list-group-item menu2" id="lnkJugador" href="jsp#/jugador">Jugador</a>
+        <a  class="list-group-item menu2" id="lnkContrincante" href="jsp#/contrincante">Contrincante</a>
+        <a  class="list-group-item menu2" id="lnkPartido" href="jsp#/partido">Partido</a>
+        <a  class="list-group-item menu2" id="lnkEstadistica" href="jsp#/estadistica">Estadistica</a>
     </div>
 </div>
 
 
 
 
-
-
-
-
-
-<div class="panel panel-primary">
+<div class="panel menu1 panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">Cuestionario</h3>
     </div>
     <div class="list-group">
-        <a class="list-group-item" id="lnkCuestionario" href="jsp#/cuestionario">Cuestionario</a>
-        <a class="list-group-item" id="lnkPregunta" href="jsp#/pregunta">Pregunta</a>
-        <a class="list-group-item" id="lnkOpcion" href="jsp#/opcion">Opcion</a>
-        <a class="list-group-item" id="lnkRespuesta" href="jsp#/respuesta">Respuesta</a>
+        <a class="list-group-item menu2" id="lnkCuestionario" href="jsp#/cuestionario">Cuestionario</a>
+        <a class="list-group-item menu2" id="lnkPregunta" href="jsp#/pregunta">Pregunta</a>
+        <a class="list-group-item menu2" id="lnkOpcion" href="jsp#/opcion">Opcion</a>
+        <a class="list-group-item menu2" id="lnkRespuesta" href="jsp#/respuesta">Respuesta</a>
     </div>
 </div>
 

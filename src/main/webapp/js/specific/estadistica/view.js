@@ -81,13 +81,13 @@ estadisticaView.prototype.doEventsLoading = function () {
 
         $('#estadisticaForm').append(thisObject.getEmptyModal());
 
-        oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oEstadisticaModel, oEstadisticaView);
+        oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oJugadorModel, oJugadorView);
         oControl.modalListEventsLoading('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), function (id) {
             $('#obj_jugador_id').val(id).change();
             $('#obj_jugador_desc').text(decodeURIComponent(oJugadorModel.getMeAsAForeignKey(id)));
             $('#modal01').modal('hide');
 
-        }, oEstadisticaModel, oEstadisticaView);
+        }, oJugadorModel, oJugadorView);
         return false;
     });
 
@@ -100,13 +100,13 @@ estadisticaView.prototype.doEventsLoading = function () {
 
         $('#estadisticaForm').append(thisObject.getEmptyModal());
 
-        oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oEstadisticaModel, oEstadisticaView);
+        oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oPartidoModel, oPartidoView);
         oControl.modalListEventsLoading('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), function (id) {
             $('#obj_partido_id').val(id).change();
             $('#obj_partido_desc').text(decodeURIComponent(oPartidoModel.getMeAsAForeignKey(id)));
             $('#modal01').modal('hide');
 
-        }, oEstadisticaModel, oEstadisticaView);
+        }, oPartidoModel, oPartidoView);
         return false;
     });
 
