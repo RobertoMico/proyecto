@@ -89,11 +89,12 @@ body{
   position: relative;
 }
 #cssmenu {
-  width: 250px;
+  width: 150%;
   border-bottom: 4px solid #656659;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  margin-left: -15%;
 }
 #cssmenu a {
   line-height: 1.3;
