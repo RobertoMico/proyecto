@@ -25,9 +25,9 @@
         id_usuario = user.getId();
     }
 %>
-
+<%--
 <div class="panel menu1 panel-primary">
-    <div class="panel-heading">
+    <div class="menu3">
         <h3 class="panel-title">Sesión</h3>
     </div>
     <div class="list-group">
@@ -35,8 +35,9 @@
         <a class="list-group-item menu2"  id="lnkLogout" href="jsp?ob=usuario&op=logout">Logout</a>
     </div>
 </div>
+
 <div class="panel menu1 panel-primary">
-    <div class="panel-heading">
+    <div class="menu3">
         <h3 class="panel-title">Gestión de Usuarios</h3>
     </div>
     <div class="list-group">
@@ -44,9 +45,8 @@
     </div>
 </div>
 
-
 <div class="panel menu1 panel-primary">
-    <div class="panel-heading">
+    <div class="menu3">
         <h3 class="panel-title">Mantenimientos</h3>
     </div>
     <div class="list-group">
@@ -56,12 +56,8 @@
         <a  class="list-group-item menu2" id="lnkEstadistica" href="jsp#/estadistica">Estadistica</a>
     </div>
 </div>
-
-
-
-
 <div class="panel menu1 panel-primary">
-    <div class="panel-heading">
+    <div class="menu3">
         <h3 class="panel-title">Cuestionario</h3>
     </div>
     <div class="list-group">
@@ -72,4 +68,32 @@
     </div>
 </div>
 
+--%>
+
+<div id='cssmenu'>
+<ul>
+   <li class='active'><a href='#'><span>U.D. La Plata</span></a></li>
+   <li class='has-sub'><a href='#'><span>Sesión</span></a>
+      <ul>
+            <li><a class="list-group-item menu2" id="lnkHome"  href="jsp"><span>Home</span></a></li>
+            <li><a class="list-group-item menu2"  id="lnkLogout" href="jsp?ob=usuario&op=logout"><span>Logout</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Gestión de Usuarios</span></a>
+      <ul>
+          <li><a href='#'><a  class="list-group-item menu2" id="lnkUsuario" href="jsp#/usuario"><span>Usuario</span></a></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Mantenimientos</span></a>
+      <ul>
+          <li><a  class="list-group-item menu2" id="lnkJugador" href="jsp#/jugador"><span>Jugador</span></a></li>
+          <li><a  class="list-group-item menu2" id="lnkContrincante" href="jsp#/contrincante"><span>Contrincante</span></a></li>
+          <li><a  class="list-group-item menu2" id="lnkPartido" href="jsp#/partido"><span>Partido</span></a></li>
+          <li><<a  class="list-group-item menu2" id="lnkEstadistica" href="jsp#/estadistica"><span>Estadistica</span></a></li>
+
+      </ul>
+   </li>
+
+</ul>
+</div>
 

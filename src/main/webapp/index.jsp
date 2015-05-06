@@ -43,7 +43,8 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
         <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
-        
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="script.js"></script>
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrapValidator.min.css">
         <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"  />
