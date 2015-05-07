@@ -30,6 +30,6 @@
     --%>
     <a href="#"> <i class="barranavegacion3">Conectado como <%=usuario%> (<%=level%>)</i></a>
 </li>
-<li><a class="salir" href="jsp?ob=usuario&op=logout">Salir</a></li>
+
     <%} else {%>
 <li><a class="entrar" href="jsp?op=login01&ob=usuario">Entrar</a></li><%}%>

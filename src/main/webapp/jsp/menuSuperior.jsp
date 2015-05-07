@@ -40,7 +40,9 @@
             <li><a href="jsp#/estadistica">Estadistica</a></li>
             
         </ul>
+    
     </li>
+    <li><a class="salir" href="jsp?ob=usuario&op=logout">Salir</a></li>
     <%}%>
 </ul>
 
