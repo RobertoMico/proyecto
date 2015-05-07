@@ -27,7 +27,7 @@
     }
 %>
 
-<ul class="nav navbar-nav">
+<ul class="botonesbarra">
     <li><a class="inicio" href="jsp">Inicio</a></li>
     <%if (id_tipousuario == 1) {%>
     <li><a href="jsp#/usuario">Usuarios</a></li>

@@ -70,40 +70,35 @@
         <![endif]-->
 
         <!-- Fixed navbar -->
-        <div class="navbar">
-            <div class="container barra">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="jsp"><%=AppInformationHelper.getAppName()%></a>
-                </div>
-                <div class="collapse navbar-collapse">
+                   
+                    
+        <div class="barranavegacion">
+            
+           
+                    <a class="barranavegacion1" href="jsp"><%=AppInformationHelper.getAppName()%></a>
 
-                    <ul class="nav navbar-nav">
+                    <ul class="barranavegacion2">
                         <%if (user != null) {%>
                         <jsp:include page="jsp/menuSuperior.jsp" /> 
                         <% }%>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                   
+        </div>
+        
+        <div class="barranavegacion4">
+                    <ul>
                         <jsp:include page="jsp/usuario/infologin.jsp" />
                     </ul>
-
-                </div><!--/.nav-collapse -->
-            </div>
-        </div>
-
+        </div>             
 
         <% if (user != null) {%>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2" id="menuLateral">
+
+            <div class="lateral">
+
                     <jsp:include page="jsp/menuLateral.jsp" />
-                </div>
-                <div class="col-md-10">
+
+                <div class="contenido col-md-9">
                     <div id="indexContenido"></div>
                     <div id="indexContenidoJsp">
                         <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                
@@ -111,13 +106,14 @@
 
                 </div>
             </div>
+                    
             <div class="row">
                 <div class="col-md-12" id="contenidoParseado"></div>   
             </div>
             <div class="row">
                 <div class="col-md-12"><hr><footer><p class="pull-right">&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></footer></div> 
             </div>
-        </div>            
+           
 
         <% } else {%>
 
