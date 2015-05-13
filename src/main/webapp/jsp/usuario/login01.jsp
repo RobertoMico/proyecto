@@ -17,43 +17,44 @@
 --%>
 
 <%@page import="net.daw.helper.EstadoHelper"%>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 col-md-offset-4">
-            <img class="pull-left" src="fonts/user.png" alt="user image" style="padding: 20px 10px 5px 0" />
-            <h1>Formulario de entrada al sistema</h1>
+<div>
+
+        <div class="iniciosesion col-sm-6 col-md-4 col-md-offset-4">
+            <img class="imagelogin" src="fonts/user.png" alt="user image" />
+            <h1>Iniciar<br />sesión</h1>
             <form class="form-signin" id="loginForm" action="jsp" role="form" method="post">                                    
                 <input type="hidden" name="ob" value="usuario" />
                 <input type="hidden" name="op" value="login02" />                
-                <label class="control-label" for="inputLogin" style="margin-top: 15px">Usuario:</label>
+                
+                <label class="usuariopass1" for="inputLogin" style="margin-top: 15px">Usuario:</label><br />
                 <%
                     if (EstadoHelper.getTipo_estado() == EstadoHelper.getTipo_estado().Debug) {
                 %>
-                <input value="rafael" class="form-control"  id="inputLogin" type="text" placeholder="nombre de usuario" required="" autofocus="" name="login" />                                                    
+                <input value="rafael"  id="inputLogin" type="text" placeholder="nombre de usuario" required="" autofocus="" name="login" />  <br />                                                  
                 <%
                 } else {
                 %>
-                <input class="form-control"  id="inputLogin" type="text" placeholder="nombre de usuario" required="" autofocus="" name="login" />                                                    
+                <input  id="inputLogin" type="text" placeholder="nombre de usuario" required="" autofocus="" name="login" />                                                    
                 <%
                     }
                 %>
-                <label class="control-label" for="password" style="margin-top: 15px">Password:</label>
+                <label class="usuariopass2" for="password" style="margin-top: 15px">Password:</label><br />
                 <%
                     if (EstadoHelper.getTipo_estado() == EstadoHelper.getTipo_estado().Debug) {
                 %>
-                <input value="rafael" class="form-control" type="password" id="inputPassword" placeholder="contraseña"  required="" name="password" />                                                               
+                <input value="rafael" type="password" id="inputPassword" placeholder="contraseña"  required="" name="password" />                                                               
                 <%
                 } else {
                 %>
-                <input class="form-control" type="password" id="inputPassword" placeholder="contraseña"  required="" name="password" />                                                               
+                <input type="password" id="inputPassword" placeholder="contraseña"  required="" name="password" />                                                               
                 <%
                     }
                 %>                
-                <button class="btn btn-lg btn-primary btn-block" type="submit"  style="margin-top: 15px">Acceder</button>   
-                <button class="btn btn-lg btn-danger btn-block" type="reset" style="margin-top: 5px">Reset</button>
+                <button class="botonentrar" type="submit">Acceder</button>   
+                <button class="botonlimpiar" type="reset">Limpiar</button>
             </form>
         </div>
-    </div>
+
 </div>
 
 
