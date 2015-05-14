@@ -32,4 +32,4 @@
 </li>
 
     <%} else {%>
-<li><a class="entrar" href="jsp?op=login01&ob=usuario">Entrar</a></li><%}%>
+<li><a class="entrar" href="jsp?op=login01&ob=usuario">Iniciar Sesión</a></li><%}%>

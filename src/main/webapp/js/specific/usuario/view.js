@@ -138,3 +138,38 @@ usuarioView.prototype.doEventsLoading = function () {
 usuarioView.prototype.okValidation = function (f) {
     $('#usuarioForm').on('success.form.bv', f);
 };
+
+usuarioView.prototype.printValue = function (value, valor, recortar) {
+
+    var thisObject = this;
+    var strResult = "";
+    if (/obj_/.test(valor)) {
+        if (value[valor].id > 0) {
+            if (valor == "obj_tipousuario") {
+                strResult = '<a href="jsp#/' + valor.substring(4) + '/view/' + value[valor].id + '">' + value[valor].descripcion + '</a>';
+            }
+
+        } else {
+            strResult = '???';
+        }
+    } else {
+        switch (value[valor]) {
+            case true:
+                strResult = '<i class="glyphicon glyphicon-ok"></i>';
+                break;
+            case false:
+                strResult = '<i class="glyphicon glyphicon-remove"></i>';
+                break;
+            default:
+                strResult = decodeURIComponent(value[valor]);
+
+                if (recortar)
+                    if (strResult.length > 50)
+                        strResult = strResult.substr(0, 20) + " ...";
+
+        }
+        ;
+    }
+    ;
+    return strResult;
+};
