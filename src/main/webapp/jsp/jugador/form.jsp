@@ -51,6 +51,9 @@
         </div>
     </div>
 
+    <input type="hidden"  class="form-control"  id="imagen" name="imagen" size="255" placeholder="imagen" />
+    
+    
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <div id="messages"></div>

@@ -45,7 +45,7 @@ public class subir extends HttpServlet {
 
                 Iterator it = hash.entrySet().iterator();
                 Map.Entry e = (Map.Entry) it.next();
-                strMessage += e.getKey() + " " + e.getValue() + "<br/>";
+                //strMessage += e.getKey() + " " + e.getValue() + "<br/>";
                 int id = Integer.parseInt(e.getValue().toString());
 
                 //update del campo imagen de la base de datos
