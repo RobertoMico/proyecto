@@ -141,3 +141,45 @@ estadisticaView.prototype.doEventsLoading = function () {
 estadisticaView.prototype.okValidation = function (f) {
     $('#estadisticaForm').on('success.form.bv', f);
 };
+
+
+view.prototype.printValue = function (value, valor, recortar) {
+
+    var thisObject = this;
+    var strResult = "";
+    if (/obj_/.test(valor)) {
+        if (value[valor].id > 0) {
+            if (valor == "obj_jugador") {
+                strResult = '<a href="jsp#/' + valor.substring(4) + '/view/' + value[valor].id + '">' + value[valor].nombre + " " + value[valor].ape1 + '</a>';
+            } else { //usuario
+                if (valor == "obj_partido") {
+                    strResult = '<a href="jsp#/' + valor.substring(4) + '/view/' + value[valor].id + '">' + value[valor].fecha + '</a>';
+                } else {
+                    strResult = '<a href="jsp#/' + valor.substring(4) + '/view/' + value[valor].id + '">' + value[valor].id + ":" + util().getForeign(value[valor]) + '</a>';
+                }
+            }
+
+        } else {
+            strResult = '???';
+        }
+    } else {
+        switch (value[valor]) {
+            case true:
+                strResult = '<i class="glyphicon glyphicon-ok"></i>';
+                break;
+            case false:
+                strResult = '<i class="glyphicon glyphicon-remove"></i>';
+                break;
+            default:
+                strResult = decodeURIComponent(value[valor]);
+
+                if (recortar)
+                    if (strResult.length > 50)
+                        strResult = strResult.substr(0, 20) + " ...";
+
+        }
+        ;
+    }
+    ;
+    return strResult;
+};

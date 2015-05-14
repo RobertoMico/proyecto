@@ -34,7 +34,7 @@ jugadorView.prototype.loadButtons = function (id) {
     botonera += '<a class="btn btn-default view" id="' + id + '"  href="jsp#/' + this.clase + '/view/' + id + '"><img class="icono" src="images/ver.png"></img></a>';
     botonera += '<a class="btn btn-default edit" id="' + id + '"  href="jsp#/' + this.clase + '/edit/' + id + '"><img class="icono" src="images/editar.png"></img></a>';
     botonera += '<a class="btn btn-default remove" id="' + id + '"  href="jsp#/' + this.clase + '/remove/' + id + '"><img class="icono" src="images/eliminar.png"></img></a>';
-    botonera += '<a class="btn btn-default upload" id="' + id + '"  href="jsp#/' + this.clase + '/upload/' + id + '"><img class="icono" src="images/eliminar.png"></img></a>';
+    botonera += '<a class="btn btn-default upload" id="' + id + '"  href="jsp#/' + this.clase + '/upload/' + id + '"><img class="icono" src="images/subir.png"></img></a>';
     botonera += '</div></div>';
     return botonera;
 

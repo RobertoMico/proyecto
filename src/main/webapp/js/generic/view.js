@@ -270,7 +270,7 @@ view.prototype.getHeaderPageTable = function (prettyFieldNames, fieldNames, visi
                 tabla += '</th>';
             }
         });
-        tabla += '<th class="col-md-2">acciones</th>';
+        tabla += '<th class="col-md-2">Acciones</th>';
         tabla += '</tr>';
     }
     ;

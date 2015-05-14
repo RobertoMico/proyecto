@@ -52,11 +52,7 @@
         
     <!--  
         <link rel="stylesheet" href="css/producto.css">
-        <% if (user != null) {%>
-        <link rel="stylesheet" href="css/skin/<%=user.getSkin()%>.css">
-        <% } else {%>
-        <link rel="stylesheet" href="css/skin/main.css">
-        <% }%>       
+           
     -->
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
