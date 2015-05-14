@@ -48,6 +48,16 @@ public class JugadorBeanGenSpImpl extends BeanGenImpl implements BeanInterface {
     @Expose
     private Integer dorsal = 0;
 
+    @Expose String imagen ="";
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+    
     public String getNombre() {
         return nombre;
     }

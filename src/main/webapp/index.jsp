@@ -110,9 +110,9 @@
             <div class="row">
                 <div class="col-md-12" id="contenidoParseado"></div>   
             </div>
-            <div class="row">
-                <div class="col-md-12"><hr><footer><p class="pull-right">&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></footer></div> 
-            </div>
+
+            <div class="pie1"><p>&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></div>
+
            
 
         <% } else {%>

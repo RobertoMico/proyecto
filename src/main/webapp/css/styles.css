@@ -405,4 +405,20 @@ body{
 .iniciosesion input{
     margin-left: 32%;
 }
+
+.icono{
+    width: 50%;
+}
+
+.contenido{
+    color:black;
+}
+
+
 //Footer
+.pie1{
+    background: red;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+}

@@ -75,4 +75,11 @@ function fJugadorRoutes() {
         $('#indexContenidoJsp').empty();
         return false;
     });
+    
+    Path.map("#/jugador/upload/:id").to(function () {
+        $('#indexContenidoJsp').spinner();
+        var paramsObject = param().defaultizeUrlObjectParameters(param().getUrlObjectFromUrlString(this.params['url']));
+        oJugadorControl.upload($('#indexContenido'), paramsObject['id'], oJugadorModel, oJugadorView);
+        $('#indexContenidoJsp').empty();
+    });
 }

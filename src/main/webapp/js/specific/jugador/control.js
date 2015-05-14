@@ -24,3 +24,12 @@ jugadorControl.prototype.getClassNameJugador = function () {
     return this.getClassName() + "Control";
 };
 var oJugadorControl = new jugadorControl('jugador');
+
+control.prototype.upload = function (place, id, oModel, oView) {
+    var thisObject = this;
+    $(place).empty();
+    $(place).append(oView.getPanel("Imagen de " + this.clase, oView.getEmptyView("imagen","unwrappered")));
+    var oDocumentoModel = oModel;
+    oDocumentoModel.loadAggregateViewOne(id);
+    oView.loadFormValues(oDocumentoModel.getCachedOne(), oDocumentoModel.getCachedFieldNames());
+};
