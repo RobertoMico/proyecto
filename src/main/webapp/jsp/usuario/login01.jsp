@@ -20,7 +20,7 @@
 <div>
 
         <div class="iniciosesion col-sm-6 col-md-4 col-md-offset-4">
-            <img class="imagelogin" src="fonts/user.png" alt="user image" />
+            <img class="escudologin" src="./css/images/escudo.png" alt="user image" />
             <h1>Iniciar<br />sesión</h1>
             <form class="form-signin" id="loginForm" action="jsp" role="form" method="post">                                    
                 <input type="hidden" name="ob" value="usuario" />

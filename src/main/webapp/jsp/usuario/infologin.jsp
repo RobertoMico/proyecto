@@ -23,13 +23,17 @@
         String us = user.getLogin();
         String usuario = us.substring(0, 1).toUpperCase() + us.substring(1);
         String level = user.getObj_tipousuario().getDescripcion();
+        Integer id_usuario = user.getId();
 %>
 <li>
     <%-- 
     <a href="#"> <i class="icon-user">Estás logueado como <%=usuario%> / <%=user.getTipoUsuario()%></i></a>
     --%>
-    <a href="#"> <i class="barranavegacion3">Conectado como <%=usuario%> (<%=level%>)</i></a>
+    <a href="jsp#/usuario/view/<%=id_usuario%>"> <i class="barranavegacion3">Conectado como <%=usuario%> (<%=level%>)</i></a>
 </li>
 
-    <%} else {%>
-<li><a class="entrar" href="jsp?op=login01&ob=usuario">Iniciar Sesión</a></li><%}%>
+<%} else {%>
+<a class="entrar" href="jsp?op=login01&ob=usuario">Iniciar Sesión</a>
+<a class="registrar" href="jsp#/usuario/new">Regístrate</a>
+
+<%}%>

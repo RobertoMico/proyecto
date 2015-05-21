@@ -146,10 +146,9 @@
             <thead id="tableHeaders"></thead>
             <tbody id="tableBody"></tbody>
         </table>
-        <div id="datos"></div>
-        <div id="datos2"></div>
     </div> 
 </div> 
+
 <!-- Modals -->
 <div id="modal01" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

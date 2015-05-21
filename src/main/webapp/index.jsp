@@ -71,8 +71,8 @@
         <div class="barranavegacion">
             
            
-                    <a class="barranavegacion1" href="jsp"><%=AppInformationHelper.getAppName()%></a>
-
+            <a class="barranavegacion1" href="jsp"><img class="escudo" src="css/images/escudo.png" alt="U.D. La Plata"/></a>
+            
                     <ul class="barranavegacion2">
                         <%if (user != null) {%>
                         <jsp:include page="jsp/menuSuperior.jsp" /> 
@@ -82,9 +82,7 @@
         </div>
         
         <div class="barranavegacion4">
-                    <ul>
                         <jsp:include page="jsp/usuario/infologin.jsp" />
-                    </ul>
         </div>             
 
         <% if (user != null) {%>
@@ -107,9 +105,9 @@
                 <div class="col-md-12" id="contenidoParseado"></div>   
             </div>
 
-            <div class="pie1"><p>&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></div>
+            <!--<div class="pie1"><p>&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></div>
 
-           
+            -->
 
         <% } else {%>
 
@@ -124,9 +122,9 @@
             <div class="row">
                 <div class="col-md-12" id="contenidoParseado"></div>   
             </div>
-            <div class="row">
+           <!-- <div class="row">
                 <div class="col-md-12"><hr><footer><p class="pull-right">&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></footer></div>   
-            </div>
+            </div>-->
         </div>  
 
 
@@ -445,5 +443,6 @@
 
         </script>
     </body>
+
 </html>
 

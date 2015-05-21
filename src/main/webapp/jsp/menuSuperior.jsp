@@ -29,6 +29,7 @@
 
 <ul class="botonesbarra">
     <li><a class="inicio" href="jsp">Inicio</a></li>
+    <%if (user != null) {%>
     <%if (id_tipousuario == 1) {%>
     <li><a href="jsp#/usuario">Usuarios</a></li>
     <li class="dropdown">
@@ -42,6 +43,7 @@
         </ul>
     
     </li>
+    <%}%>
     <li><a class="salir" href="jsp?ob=usuario&op=logout">Salir</a></li>
     <%}%>
 </ul>

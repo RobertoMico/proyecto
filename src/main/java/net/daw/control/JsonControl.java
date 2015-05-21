@@ -15,7 +15,6 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-
 package net.daw.control;
 
 import com.google.gson.Gson;
@@ -310,7 +309,7 @@ public class JsonControl extends HttpServlet {
                         EstadotareaControlRouteGenSpImpl oEstadotareaRoute = new EstadotareaControlRouteGenSpImpl();
                         EstadotareaControlOperationGenSpImpl oEstadotareaControlOperation = new EstadotareaControlOperationGenSpImpl(request);
                         jsonResult = oEstadotareaRoute.execute(request, oEstadotareaControlOperation);
-                        break; 
+                        break;
                     case "proyecto":
                         ProyectoControlRouteGenSpImpl oProyectoRoute = new ProyectoControlRouteGenSpImpl();
                         ProyectoControlOperationGenSpImpl oProyectoControlOperation = new ProyectoControlOperationGenSpImpl(request);
@@ -321,9 +320,7 @@ public class JsonControl extends HttpServlet {
                         TipotareaControlOperationGenSpImpl oTipotareaControlOperation = new TipotareaControlOperationGenSpImpl(request);
                         jsonResult = oTipotareaRoute.execute(request, oTipotareaControlOperation);
                         break;
-                        
 
-                        
                     case "jugador":
                         JugadorControlRouteGenSpImpl oJugadorRoute = new JugadorControlRouteGenSpImpl();
                         JugadorControlOperationGenSpImpl oJugadorControlOperation = new JugadorControlOperationGenSpImpl(request);
@@ -333,23 +330,29 @@ public class JsonControl extends HttpServlet {
                         EstadisticaControlRouteGenSpImpl oEstadisticaRoute = new EstadisticaControlRouteGenSpImpl();
                         EstadisticaControlOperationGenSpImpl oEstadisticaControlOperation = new EstadisticaControlOperationGenSpImpl(request);
                         jsonResult = oEstadisticaRoute.execute(request, oEstadisticaControlOperation);
-                        break;    
+                        break;
                     case "partido":
                         PartidoControlRouteGenSpImpl oPartidoRoute = new PartidoControlRouteGenSpImpl();
                         PartidoControlOperationGenSpImpl oPartidoControlOperation = new PartidoControlOperationGenSpImpl(request);
                         jsonResult = oPartidoRoute.execute(request, oPartidoControlOperation);
-                        break;     
+                        break;
                     case "contrincante":
                         ContrincanteControlRouteGenSpImpl oContrincanteRoute = new ContrincanteControlRouteGenSpImpl();
                         ContrincanteControlOperationGenSpImpl oContrincanteControlOperation = new ContrincanteControlOperationGenSpImpl(request);
                         jsonResult = oContrincanteRoute.execute(request, oContrincanteControlOperation);
-                        break;     
-                        
+                        break;
+
                     default:
                         ExceptionBooster.boost(new Exception(this.getClass().getName() + ":processRequest ERROR: no such operation"));
                 }
             } else {
-                jsonResult = "{\"error\" : \"No active server session\"}";
+                if (ParameterCooker.prepareObject(request).equals("usuario")) {
+                    UsuarioControlRouteGenSpImpl oUsuarioRoute = new UsuarioControlRouteGenSpImpl();
+                    UsuarioControlOperationGenSpImpl oUsuarioControlOperation = new UsuarioControlOperationGenSpImpl(request);
+                    jsonResult = oUsuarioRoute.execute(request, oUsuarioControlOperation);
+                } else {
+                    jsonResult = "{\"error\" : \"No active server session\"}";
+                }
             }
             if (jsonResult.equals("error")) {
                 Map<String, String> data = new HashMap<>();

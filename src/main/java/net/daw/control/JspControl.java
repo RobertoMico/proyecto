@@ -68,12 +68,18 @@ public class JspControl extends HttpServlet {
             String mode = ParameterCooker.prepareMode(request);
             //security check
             if (request.getSession().getAttribute("usuarioBean") == null) {
-                ob = "usuario";
-                if (!op.equals("inicio") && !op.equals("login02")) {
-                    op = "login01";
-                    mode = "wrappered";
+
+                if (ob.equals("usuario") && op.equals("form")) {
+                } else {
+
+                    ob = "usuario";
+                    if (!op.equals("inicio") && !op.equals("login02")) {
+                        op = "login01";
+                        mode = "wrappered";
+                    }
                 }
             }
+
             //login & logout management
             if (ob.equalsIgnoreCase("usuario")) {
                 if (op.equalsIgnoreCase("login02")) {
@@ -119,7 +125,6 @@ public class JspControl extends HttpServlet {
                     request.getSession().invalidate();
                 }
 
-                
             }
             //delivering jsp page
             if ("wrappered".equals(mode)) {
