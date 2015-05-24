@@ -1,3 +1,9 @@
+html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
 body{
     background: url("../images/soccer3.jpg") no-repeat fixed;
     font-family: 'Titillium Web', sans-serif;
@@ -58,10 +64,6 @@ body{
     margin-left: 5%;
 }
 
-.barranavegacion1{
-
-}
-
 .barranavegacion2{
     padding:20px;
     width: 40%;
@@ -93,10 +95,34 @@ li{
     color: black;
 }
 
-.jumbotron {
-    opacity: 0.9;
+.bienvenida {
+    width:65%;
+    height: 500px;
+    background: white;
+    color:black;
+    font-family: 'Titillium Web', sans-serif;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
+.bienvenida h1{
+    padding: 6%;
+    text-align: center;
+    font-weight: 700;
+}
+
+.bienvenida p{
+    padding: 6%;
+    text-align: center;
+    font-size: 6em;
+}
+
+.escudo2{
+    width: 30%;
+    height: 45%;
+    margin-left:35%;
+}
 .menu2{
     text-align: center;
     transition: 0.3s;
