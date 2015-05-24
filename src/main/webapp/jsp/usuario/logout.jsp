@@ -15,6 +15,8 @@
  along with this program; if not, write to the Free Software
  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 --%>
-
-<h1>Vd. ha salido del sistema</h1>
-<h4>Hasta pronto.</h4>
+<div class="cerrarsesion">
+<h1>¡Hasta pronto!</h1>
+<img class="escudo2" src="css/images/escudo.png" alt="U.D. La Plata">
+<p>Esperamos que vuelvas</p>
+</div>
