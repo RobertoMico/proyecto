@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 16-04-2015 a las 07:55:09
+-- Tiempo de generación: 27-05-2015 a las 07:30:19
 -- Versión del servidor: 5.5.39
 -- Versión de PHP: 5.4.32
 
@@ -601,6 +601,27 @@ INSERT INTO `compra` (`id`, `id_cliente`, `id_producto`, `cantidad`, `fecha`, `i
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `contrincante`
+--
+
+CREATE TABLE IF NOT EXISTS `contrincante` (
+`id` int(15) NOT NULL COMMENT 'id del rival',
+  `nombre` varchar(50) DEFAULT NULL COMMENT 'nombre del rival'
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Volcado de datos para la tabla `contrincante`
+--
+
+INSERT INTO `contrincante` (`id`, `nombre`) VALUES
+(1, 'Titanes'),
+(2, 'La fabrica de padel'),
+(3, 'Atletico Bolinche'),
+(5, 'NewTeam');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `cuestionario`
 --
 
@@ -808,15 +829,15 @@ CREATE TABLE IF NOT EXISTS `estadistica` (
   `id_partido` int(15) DEFAULT NULL COMMENT 'id del partido',
   `goles` int(50) DEFAULT NULL COMMENT 'goles a favor',
   `asistencias` int(50) DEFAULT NULL COMMENT 'asistencias',
-  `tarjetas_rojas` int(15) DEFAULT NULL,
-  `tarjetas_amarillas` int(15) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=38 ;
+  `tarjetasrojas` int(15) DEFAULT NULL COMMENT 'Tarjetas Rojas',
+  `tarjetasamarillas` int(15) DEFAULT NULL COMMENT 'Tarjetas Amarillas'
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
 
 --
 -- Volcado de datos para la tabla `estadistica`
 --
 
-INSERT INTO `estadistica` (`id`, `id_jugador`, `id_partido`, `goles`, `asistencias`, `tarjetas_rojas`, `tarjetas_amarillas`) VALUES
+INSERT INTO `estadistica` (`id`, `id_jugador`, `id_partido`, `goles`, `asistencias`, `tarjetasrojas`, `tarjetasamarillas`) VALUES
 (1, 1, 1, 0, 1, 0, 0),
 (2, 2, 1, 0, 0, 0, 0),
 (3, 3, 1, 0, 0, 0, 1),
@@ -852,7 +873,8 @@ INSERT INTO `estadistica` (`id`, `id_jugador`, `id_partido`, `goles`, `asistenci
 (34, 9, 3, 1, 0, 0, 0),
 (35, 10, 3, 1, 1, 0, 0),
 (36, 11, 3, 1, 0, 0, 0),
-(37, 12, 3, 0, 0, 0, 1);
+(37, 12, 3, 0, 0, 0, 1),
+(38, 1, 4, 1, 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -961,29 +983,30 @@ INSERT INTO `impuesto` (`id`, `nombre`, `valor`) VALUES
 
 CREATE TABLE IF NOT EXISTS `jugador` (
 `id` int(15) NOT NULL COMMENT 'id del jugador',
-  `Nombre` varchar(25) DEFAULT NULL COMMENT 'nombre del jugador',
+  `nombre` varchar(25) DEFAULT NULL COMMENT 'nombre del jugador',
   `ape1` varchar(50) DEFAULT NULL COMMENT 'primer apellido del jugador',
   `ape2` varchar(50) DEFAULT NULL COMMENT 'segundo apellido del jugador',
-  `dorsal` int(2) DEFAULT NULL COMMENT 'dorsal del jugador'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+  `dorsal` int(2) DEFAULT NULL COMMENT 'dorsal del jugador',
+  `imagen` varchar(255) DEFAULT NULL COMMENT 'imagen'
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Volcado de datos para la tabla `jugador`
 --
 
-INSERT INTO `jugador` (`id`, `Nombre`, `ape1`, `ape2`, `dorsal`) VALUES
-(1, 'Roberto', 'Micó', 'Martínez', 23),
-(2, 'Jaime', 'Carrasco', 'Martínez', 10),
-(3, 'Ignacio', 'Cigalat', 'Saez', 18),
-(4, 'Jesús Pablo', 'Ndong', 'Nguema', 6),
-(5, 'Cesar', 'Ibañez', 'Sorolla', 4),
-(6, 'Antonio', 'Cerveró', 'Llanes', 11),
-(7, 'Carlos', 'Illera', 'García', 9),
-(8, 'Jose Ramón', 'Perez', 'Ferrer', 2),
-(9, 'Javier', 'Salgado', 'Pacheco', 12),
-(10, 'Daniel', 'Flores', 'García', 21),
-(11, 'Enrique', 'Cigalat', 'Belda', 7),
-(12, 'Alejandro', 'Ortiz', 'Jiménez', 1);
+INSERT INTO `jugador` (`id`, `nombre`, `ape1`, `ape2`, `dorsal`, `imagen`) VALUES
+(1, 'Roberto', 'Micó', 'Martínez', 23, '<img src="/images/vcf.jpg"  width="150" />'),
+(2, 'Jaime', 'Carrasco', 'Mart%C3%ADnes', 10, '<img src="/images/vcf.jpg"  width="150" />'),
+(3, 'Ignacio', 'Cigalat', 'Saez', 18, NULL),
+(4, 'Jesús Pablo', 'Ndong', 'Nguema', 6, NULL),
+(5, 'Cesar', 'Ibañez', 'Sorolla', 4, NULL),
+(6, 'Antonio', 'Cerveró', 'Llanes', 11, NULL),
+(7, 'Carlos', 'Illera', 'García', 9, NULL),
+(8, 'Jose Ramón', 'Perez', 'Ferrer', 2, NULL),
+(9, 'Javier', 'Salgado', 'Pacheco', 12, NULL),
+(10, 'Daniel', 'Flores', 'García', 21, NULL),
+(11, 'Enrique', 'Cigalat', 'Belda', 7, NULL),
+(12, 'Alejandro', 'Ortiz', 'Jiménez', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -1929,19 +1952,20 @@ INSERT INTO `ordenador` (`id`, `descripcion`) VALUES
 
 CREATE TABLE IF NOT EXISTS `partido` (
 `id` int(15) NOT NULL COMMENT 'id del partido',
-  `id_rival` int(15) DEFAULT NULL COMMENT 'id del rival',
-  `goles_contra` int(50) DEFAULT NULL COMMENT 'goles en contra',
+  `id_contrincante` int(15) DEFAULT NULL COMMENT 'id del rival',
+  `golescontra` int(50) DEFAULT NULL COMMENT 'goles en contra',
   `fecha` date DEFAULT NULL COMMENT 'fecha del partido'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `partido`
 --
 
-INSERT INTO `partido` (`id`, `id_rival`, `goles_contra`, `fecha`) VALUES
+INSERT INTO `partido` (`id`, `id_contrincante`, `golescontra`, `fecha`) VALUES
 (1, 1, 2, '2014-11-14'),
 (2, 2, 3, '2014-11-21'),
-(3, 3, 1, '2014-11-28');
+(3, 3, 1, '2014-11-28'),
+(4, 5, 4, '2015-06-06');
 
 -- --------------------------------------------------------
 
@@ -2735,26 +2759,6 @@ CREATE TABLE IF NOT EXISTS `respuesta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `rival`
---
-
-CREATE TABLE IF NOT EXISTS `rival` (
-`id` int(15) NOT NULL COMMENT 'id del rival',
-  `nombre` varchar(50) DEFAULT NULL COMMENT 'nombre del rival'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- Volcado de datos para la tabla `rival`
---
-
-INSERT INTO `rival` (`id`, `nombre`) VALUES
-(1, 'Titanes'),
-(2, 'La fabrica de padel'),
-(3, 'Atletico Bolinche');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `tema`
 --
 
@@ -3056,47 +3060,44 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `login` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Nombre de usuario',
   `password` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Contraseña',
   `id_tipousuario` int(11) DEFAULT NULL COMMENT 'Tipo de usuario',
-  `id_estado` int(11) DEFAULT NULL COMMENT 'Estado',
-  `ciudad` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Ciudad',
-  `firma` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Firma',
-  `skin` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Plantilla'
+  `ciudad` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Ciudad'
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=31 ;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `login`, `password`, `id_tipousuario`, `id_estado`, `ciudad`, `firma`, `skin`) VALUES
-(1, 'pepe', 'pepe', 2, 1, 'Valencia', 'is my life and do what I want', 'main'),
-(2, 'juan', 'juan', 3, 3, 'Madrid', 'http://criticalandia.com críticas de entretenimiento, listas, opiniones...', 'main'),
-(3, 'maria', 'maria', 3, 6, 'Barcelona', 'If you love something, set it free. Unless it''''s a tiger.', 'main'),
-(4, 'antonia', 'antonia', 3, 7, 'Sevilla', '"El único límite a nuestros logros de mañana está en nuestras dudas de hoy."', 'main'),
-(5, 'edu', 'edu', 3, 13, 'Zaragoza', 'Plataforma: ORGULLLO CADISTA no.58', 'main'),
-(6, 'jose', 'jose', 3, 19, 'Teruel', 'Ironía: Figura literaria mediante la cual se da a entender lo contrario de lo que se dice.', 'main'),
-(7, 'silvia', 'silvia', 3, 6, 'Huesca', 'Paso de firmas', 'main'),
-(8, 'pedro', 'pedro', 3, 8, 'Alicante', 'Camisetas y calzado www.pedidoshicks.com', 'main'),
-(9, 'raquel', 'raquel', 3, 15, 'Castellón', 'PEÑA COLCHONERA Socio número 629', 'main'),
-(10, 'daniel', 'daniel', 3, 12, 'Almería', '"Obsesionado es tan sólo la palabra que usan los perezosos para describir a los dedicados"', 'main'),
-(11, 'rafael', 'rafael', 1, 17, 'A Coruña', 'Ista ye a mia tierra, a mia fabla', 'main'),
-(12, 'juan', 'juan', 3, 14, 'Barcelona', 'No todos los catalanes somos independentistas', 'main'),
-(13, 'elena', 'elena', 3, 19, 'Bilbao', 'Buenas tardes', 'main'),
-(14, 'luis', 'luis', 3, 4, 'Lugo', 'Preparado para cualquier combate', 'main'),
-(15, 'alba', 'alba', 3, 5, 'Cuenca', 'Si tienes un Ibiza o un Cordoba, este es tu club: www.clubseatcordoba.com', 'main'),
-(16, 'amparo', 'amparo', 3, 7, 'Ciudad Real', 'No hay dos sin tres', 'main'),
-(17, 'ambrosio', 'ambrosio', 3, 8, 'Guadalajara', 'Tesis+Antítesis=Síntesis. Problema+Acción = Solución.', 'main'),
-(18, 'luisa', 'luisa', 3, 1, 'Huelva', 'Y yo me iré. y se quedará mi huerto con su verde árbol, y con su pozo blanco. Y yo me iré.. Y se quedarán los pájaros cantando', 'main'),
-(19, 'leon', 'leon', 3, 3, 'Granada', 'La Infanta no sabía nada y punto.', 'main'),
-(20, 'rosa', 'rosa', 3, 2, 'Cádiz', 'Viva España', 'main'),
-(21, 'capcom', 'capcom', 3, 17, 'Jerez', 'La gente cree que soy una mala persona, pero no es cierto, yo tengo el corazón de un niño...en un frasco con formol encima de mi escritorio.', 'main'),
-(22, 'teleco', 'teleco', 3, 18, 'Vallecas', 'Foreros de la Comunidad de Madrid Nº25', 'main'),
-(23, 'mercadona', 'mercadona', 3, 13, 'Jaén', 'Y veréis el resurgir poderoso del guerrero, sin miedo a leyes ni a nostalgias.', 'main'),
-(24, 'vistaprint', 'vistaprint', 3, 15, 'Valencia', 'Codeados.com Diseño y Desarrollo web, Imagen Corporativa, SEO, Marketing Digital', 'main'),
-(25, 'google', 'google', 3, 16, 'California', 'Viva google +', 'main'),
-(26, 'konami', 'konami', 3, 6, 'Tokio', 'Viva Castolo, Minanda y Ximelez', 'main'),
-(27, 'orange', 'orange', 3, 7, 'París', 'Viva movistar', 'main'),
-(28, 'samsung', 'samsung', 3, 8, 'Cuenca', 'Viva el iPhone 6', 'main'),
-(29, 'gigabyte', 'gigabyte', 3, 10, 'Oviedo', 'Viva gigabyte', 'main'),
-(30, 'microsoft', 'microsoft', 3, 10, 'Albacete', 'La xbox ONE es la MEJOR CONSOLA', 'main');
+INSERT INTO `usuario` (`id`, `login`, `password`, `id_tipousuario`, `ciudad`) VALUES
+(1, 'pepe', 'pepe', 2, 'Valencia'),
+(2, 'juan', 'juan', 3, 'Madrid'),
+(3, 'maria', 'maria', 3, 'Barcelona'),
+(4, 'antonia', 'antonia', 3, 'Sevilla'),
+(5, 'edu', 'edu', 3, 'Zaragoza'),
+(6, 'jose', 'jose', 3, 'Teruel'),
+(7, 'silvia', 'silvia', 3, 'Huesca'),
+(8, 'pedro', 'pedro', 3, 'Alicante'),
+(9, 'raquel', 'raquel', 3, 'Castellón'),
+(10, 'daniel', 'daniel', 3, 'Almería'),
+(11, 'rafael', 'rafael', 1, 'A Coruña'),
+(12, 'juan', 'juan', 3, 'Barcelona'),
+(13, 'elena', 'elena', 3, 'Bilbao'),
+(14, 'luis', 'luis', 3, 'Lugo'),
+(15, 'alba', 'alba', 3, 'Cuenca'),
+(16, 'amparo', 'amparo', 3, 'Ciudad Real'),
+(17, 'ambrosio', 'ambrosio', 3, 'Guadalajara'),
+(18, 'luisa', 'luisa', 3, 'Huelva'),
+(19, 'leon', 'leon', 3, 'Granada'),
+(20, 'rosa', 'rosa', 3, 'Cádiz'),
+(21, 'capcom', 'capcom', 3, 'Jerez'),
+(22, 'teleco', 'teleco', 3, 'Vallecas'),
+(23, 'mercadona', 'mercadona', 3, 'Jaén'),
+(24, 'vistaprint', 'vistaprint', 3, 'Valencia'),
+(25, 'google', 'google', 3, 'California'),
+(26, 'konami', 'konami', 3, 'Tokio'),
+(27, 'orange', 'orange', 3, 'París'),
+(28, 'samsung', 'samsung', 3, 'Cuenca'),
+(29, 'gigabyte', 'gigabyte', 3, 'Oviedo'),
+(30, 'microsoft', 'microsoft', 3, 'Albacete');
 
 --
 -- Índices para tablas volcadas
@@ -3130,6 +3131,12 @@ ALTER TABLE `comentario`
 -- Indices de la tabla `compra`
 --
 ALTER TABLE `compra`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `contrincante`
+--
+ALTER TABLE `contrincante`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -3289,12 +3296,6 @@ ALTER TABLE `respuesta`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `rival`
---
-ALTER TABLE `rival`
- ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `tema`
 --
 ALTER TABLE `tema`
@@ -3384,6 +3385,11 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Num de comentario',AUTO_INC
 ALTER TABLE `compra`
 MODIFY `id` int(6) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=193;
 --
+-- AUTO_INCREMENT de la tabla `contrincante`
+--
+ALTER TABLE `contrincante`
+MODIFY `id` int(15) NOT NULL AUTO_INCREMENT COMMENT 'id del rival',AUTO_INCREMENT=6;
+--
 -- AUTO_INCREMENT de la tabla `cuestionario`
 --
 ALTER TABLE `cuestionario`
@@ -3407,7 +3413,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id',AUTO_INCREMENT=21;
 -- AUTO_INCREMENT de la tabla `estadistica`
 --
 ALTER TABLE `estadistica`
-MODIFY `id` int(30) NOT NULL AUTO_INCREMENT COMMENT 'id del encuentro',AUTO_INCREMENT=38;
+MODIFY `id` int(30) NOT NULL AUTO_INCREMENT COMMENT 'id del encuentro',AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT de la tabla `estado`
 --
@@ -3427,7 +3433,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador',AUTO_INCREME
 -- AUTO_INCREMENT de la tabla `jugador`
 --
 ALTER TABLE `jugador`
-MODIFY `id` int(15) NOT NULL AUTO_INCREMENT COMMENT 'id del jugador',AUTO_INCREMENT=13;
+MODIFY `id` int(15) NOT NULL AUTO_INCREMENT COMMENT 'id del jugador',AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT de la tabla `mensajeprivado`
 --
@@ -3462,7 +3468,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador',AUTO_INCREME
 -- AUTO_INCREMENT de la tabla `partido`
 --
 ALTER TABLE `partido`
-MODIFY `id` int(15) NOT NULL AUTO_INCREMENT COMMENT 'id del partido',AUTO_INCREMENT=4;
+MODIFY `id` int(15) NOT NULL AUTO_INCREMENT COMMENT 'id del partido',AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `pedido`
 --
@@ -3513,11 +3519,6 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador',AUTO_INCREME
 --
 ALTER TABLE `respuesta`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `rival`
---
-ALTER TABLE `rival`
-MODIFY `id` int(15) NOT NULL AUTO_INCREMENT COMMENT 'id del rival',AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `tema`
 --
