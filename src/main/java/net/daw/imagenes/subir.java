@@ -58,16 +58,16 @@ public class subir extends HttpServlet {
                 oJugadorDAO.updateOne(id, "jugador", "imagen", ruta);
 
                 strMessage += "<img src=\"" + "http://" + request.getServerName() + ":" + request.getServerPort() + "/" + "/images/" + name + "\"  width=\"150\" /><br/>";
-                strMessage += "<a href=\"" + "http://" + request.getServerName() + ":" + request.getServerPort() + "/ausiasYield2014/jsp#/jugador" + "\">Return</a><br/>";
+                strMessage += "<a href=\"" + "http://" + request.getServerName() + ":" + request.getServerPort() + "/ausiasYield2014/jsp#/jugador" + "\">Volver</a><br/>";
                 request.setAttribute("message", strMessage);
 
             } catch (Exception ex) {
-                request.setAttribute("message", "File Upload Failed: " + ex);
-                strMessage += "<a href=\"" + "http://" + request.getServerName() + ":" + request.getServerPort() + "/ausiasYield2014/jsp#/jugador" + "\">Return</a><br/>";
+                request.setAttribute("message", "Error en la subida de imagen: " + ex);
+                strMessage += "<a href=\"" + "http://" + request.getServerName() + ":" + request.getServerPort() + "/ausiasYield2014/jsp#/jugador" + "\">Volver</a><br/>";
             }
         } else {
             request.setAttribute("message", "Only serve file upload requests");
-            strMessage += "<a href=\"" + "http://" + request.getServerName() + ":" + request.getServerPort() + "/ausiasYield2014/jsp#/jugador" + "\">Return</a><br/>";
+            strMessage += "<a href=\"" + "http://" + request.getServerName() + ":" + request.getServerPort() + "/ausiasYield2014/jsp#/jugador" + "\">Volver</a><br/>";
         }
         request.getRequestDispatcher("/result.jsp").forward(request, response);
 
