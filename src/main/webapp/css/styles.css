@@ -98,18 +98,18 @@ li{
 .bienvenida {
     width:65%;
     height: 500px;
-    background: white;
     color:black;
     font-family: 'Titillium Web', sans-serif;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    text-shadow: 2px 2px 2px #000;
 }
 
 .bienvenida h1{
     padding: 6%;
     text-align: center;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .bienvenida p{
@@ -120,7 +120,6 @@ li{
 
 .escudo2{
     width: 30%;
-    height: 45%;
     margin-left:35%;
 }
 
@@ -495,6 +494,7 @@ li{
     width: 11%;
     height: 11%;
     transition: 0.2s;
+    padding:4px;
 }
 .escudo:hover{
     width: 12%;
